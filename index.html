@@ -68,6 +68,26 @@ header.nav .btn{padding:.7rem 1.2rem;font-size:.92rem}
 .hero-meta div{font-size:.92rem;color:var(--muted)}
 .hero-meta b{display:block;color:var(--text);font-size:1.05rem;font-weight:650}
 
+/* desktop hero: copy left, showcase right */
+.hero-split{display:block}
+@media (min-width:1100px){
+  .wrap{max-width:1320px}
+  .hero{padding-top:clamp(3rem,6vw,5rem)}
+  .hero-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(2.5rem,4vw,4.5rem);align-items:center;min-height:calc(100vh - 74px - 9rem)}
+  .hero h1{font-size:clamp(3.6rem,5.4vw,6rem);max-width:none}
+  .hero .lede{max-width:40ch}
+  .hero-visual .showcase-stage{margin-top:0;perspective:1800px}
+  .hero-visual .tilt{transform:rotateY(-14deg) rotateX(6deg) scale(.94);transform-origin:60% 50%}
+  .hero-visual .tilt.in{transform:rotateY(-9deg) rotateX(3deg)}
+  .hero-visual .stage-phone{right:-3%;bottom:-10%;width:clamp(130px,12vw,180px)}
+  .hero-visual .cs-hero{height:clamp(200px,20vw,300px)}
+  .hero-visual .cs-hero h4{font-size:clamp(18px,1.9vw,30px)}
+  .hero-visual .cs-nav nav{display:none}
+  .hero-visual .caption{text-align:left;margin-top:2.6rem;max-width:68%}
+  .hero-meta{max-width:none;grid-template-columns:repeat(4,1fr);margin-top:4rem}
+}
+@media (min-width:1100px) and (prefers-reduced-motion:reduce){.hero-visual .tilt,.hero-visual .tilt.in{transform:rotateY(-9deg) rotateX(3deg)}}
+
 /* marquee */
 .marquee{border-block:1px solid var(--line);overflow:hidden;padding:1.1rem 0;background:var(--bg-2)}
 .marquee .track{display:flex;gap:3rem;width:max-content;animation:scroll 40s linear infinite;font-size:1.35rem;font-weight:600;color:#C9CED8;white-space:nowrap}
@@ -377,6 +397,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
   <section class="hero">
     <div class="glow a"></div><div class="glow b"></div><div class="grid-bg"></div>
     <div class="wrap">
+      <div class="hero-split">
+      <div class="hero-copy">
       <span class="status"><b></b>Taking on new UK and European clients</span>
       <h1>Websites that <span class="grad-text">win work.</span></h1>
       <p class="lede">I design high-performing websites and run local SEO for roofing, cladding and building firms. Built to look premium, load fast on a phone and turn visitors into quote requests.</p>
@@ -384,12 +406,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
         <a class="btn btn-main" href="#contact">Get my free mini-audit</a>
         <a class="btn btn-line" href="#work">See concept work</a>
       </div>
-      <div class="hero-meta">
-        <div><b>Fixed quotes</b>Agreed in writing</div>
-        <div><b>You own it all</b>Site, domain and content</div>
-        <div><b>Phone-first</b>Where your customers are</div>
-        <div><b>No fake promises</b>Honest advice only</div>
       </div>
+      <div class="hero-visual">
 
       <div class="showcase-stage" aria-label="Concept website for a fictional roofing company, shown on a laptop screen and a phone">
         <div class="stage-glow"></div>
@@ -409,6 +427,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
         </div></div>
       </div>
       <p class="caption">Concept design for a fictional company. These are examples of my style, not client work.</p>
+      </div>
+      </div>
+      <div class="hero-meta">
+        <div><b>Fixed quotes</b>Agreed in writing</div>
+        <div><b>You own it all</b>Site, domain and content</div>
+        <div><b>Phone-first</b>Where your customers are</div>
+        <div><b>No fake promises</b>Honest advice only</div>
+      </div>
     </div>
   </section>
 
