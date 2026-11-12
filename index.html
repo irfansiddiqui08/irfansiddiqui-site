@@ -86,6 +86,24 @@ header.nav .btn{padding:.7rem 1.2rem;font-size:.92rem}
   .hero-visual .caption{text-align:left;margin-top:2.6rem;max-width:68%}
   .hero-meta{max-width:none;grid-template-columns:repeat(4,1fr);margin-top:4rem}
 }
+/* laptops and scaled displays: fit the hero to the visible height */
+@media (min-width:1100px) and (max-height:940px){
+  header.nav .wrap{height:64px}
+  .hero{padding:clamp(1.5rem,4vh,3rem) 0 clamp(2rem,5vh,3.5rem)}
+  .hero-split{min-height:calc(100vh - 64px - 5rem)}
+  .status{font-size:.82rem;padding:.35rem .8rem .35rem .55rem}
+  .hero h1{font-size:clamp(2.8rem,min(5vw,9.6vh),5.4rem);margin-top:clamp(.8rem,2.2vh,1.4rem)}
+  .hero .lede{font-size:clamp(1rem,2.1vh,1.15rem);margin:clamp(.9rem,2.6vh,1.5rem) 0 clamp(1.2rem,3.4vh,2rem);max-width:44ch}
+  .hero .btn{padding:clamp(.7rem,1.6vh,.95rem) clamp(1.1rem,1.6vw,1.5rem)}
+  .hero-visual .showcase-stage{max-width:min(100%,calc(62vh * 1.55));margin-left:auto}
+  .hero-visual .cs-hero{height:clamp(150px,26vh,280px)}
+  .hero-visual .cs-tiles{padding:12px 20px 16px}
+  .hero-visual .stage-phone{width:clamp(126px,19vh,170px);bottom:-8%}
+  .hero-visual .caption{margin-top:1.6rem;font-size:.78rem}
+  .hero-meta{margin-top:2.5rem}
+}
+@media (min-width:1100px) and (max-height:640px){.hero-visual .cs-hero .cta{display:none}.hero-visual .cs-hero{height:clamp(150px,30vh,200px)}}
+
 @media (min-width:1100px) and (prefers-reduced-motion:reduce){.hero-visual .tilt,.hero-visual .tilt.in{transform:rotateY(-9deg) rotateX(3deg)}}
 
 /* marquee */
